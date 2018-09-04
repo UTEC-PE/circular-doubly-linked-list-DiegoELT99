@@ -86,7 +86,6 @@ int generateRandomInt(int min, int max) {
 
 void insertIntoList(List<int> &numbers) {
     const int numberToInsert = generateRandomInt(0, 100);
-
     const int action = generateRandomInt(0, 1);
     switch (action) {
         case PUSH_FRONT: numbers.push_front(numberToInsert); break;
