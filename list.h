@@ -89,7 +89,10 @@ class List {
                 throw "Lista Vacia"; //Se da la excepcion
 
             if(this -> nodes == 1)
-                this -> start = nullptr; //Si la lista tiene un elemento, este se elimina.
+            {
+                delete this -> start;
+                this->start = nullptr; //Si la lista tiene un elemento, este se elimina.
+            }
 
             else
                 {
@@ -109,8 +112,10 @@ class List {
                 throw  "Lista Vacia"; //Se da la excepcion
 
             if (this -> nodes == 1) //Si la lista tiene unicamente un elemento
-                this -> start = nullptr; //Este se elimina
-
+            {
+                delete this -> start;
+                this->start = nullptr; //Si la lista tiene un elemento, este se elimina.
+            }
             else
             {
                 Node<T>* NewNode = this -> start -> prev; //Se crea un nodo igual al anterior al start
